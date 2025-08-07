@@ -1,11 +1,321 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'financas/index.css' %}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog de Finanças</title>
+    <title>FinanceBlog - Seu Portal de Educação Financeira</title>
+    <meta name="description" content="Blog especializado em educação financeira, investimentos e dicas para uma vida financeira saudável">
 </head>
 <body>
-    <h1>Olá mundo!</h1>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <h1 class="logo">FinanceBlog</h1>
+                    <span class="tagline">Educação Financeira</span>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Artigos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Investimentos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Contato</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Transforme sua Vida Financeira</h1>
+                <p class="hero-subtitle">
+                    Descubra estratégias inteligentes de investimento, dicas de economia 
+                    e conselhos práticos para alcançar sua independência financeira.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Artigos Publicados</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">10k+</span>
+                        <span class="stat-label">Leitores Mensais</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">95%</span>
+                        <span class="stat-label">Satisfação</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-card">
+                    <div class="card-icon">💰</div>
+                    <h3>Investimentos</h3>
+                    <p>Aprenda sobre ações, fundos e renda fixa</p>
+                </div>
+                <div class="hero-card">
+                    <div class="card-icon">📊</div>
+                    <h3>Planejamento</h3>
+                    <p>Organize suas finanças pessoais</p>
+                </div>
+                <div class="hero-card">
+                    <div class="card-icon">🎯</div>
+                    <h3>Objetivos</h3>
+                    <p>Alcance sua independência financeira</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Categories -->
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title">Categorias em Destaque</h2>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-icon">📈</div>
+                    <h3 class="category-title">Investimentos</h3>
+                    <p class="category-description">Estratégias e análises do mercado financeiro</p>
+                    <span class="category-count">45 artigos</span>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">💳</div>
+                    <h3 class="category-title">Cartão de Crédito</h3>
+                    <p class="category-description">Dicas para usar com inteligência</p>
+                    <span class="category-count">28 artigos</span>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">🏠</div>
+                    <h3 class="category-title">Financiamento</h3>
+                    <p class="category-description">Casa própria e crédito imobiliário</p>
+                    <span class="category-count">32 artigos</span>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">💡</div>
+                    <h3 class="category-title">Educação Financeira</h3>
+                    <p class="category-description">Conceitos básicos e avançados</p>
+                    <span class="category-count">67 artigos</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Posts -->
+    <section class="latest-posts">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Últimos Artigos</h2>
+                <p class="section-subtitle">Fique por dentro das novidades do mundo financeiro</p>
+            </div>
+            
+            <!-- Posts Grid - Preparado para integração futura -->
+            <div class="posts-grid">
+                <!-- Post Card Template -->
+                <article class="post-card">
+                    <div class="post-image">
+                        <div class="post-category">Investimentos</div>
+                    </div>
+                    <div class="post-content">
+                        <h3 class="post-title">Como Começar a Investir com Pouco Dinheiro</h3>
+                        <p class="post-excerpt">
+                            Descubra estratégias práticas para iniciar sua jornada de investimentos 
+                            mesmo com um orçamento limitado...
+                        </p>
+                        <div class="post-meta">
+                            <span class="post-date">15 de Janeiro, 2024</span>
+                            <span class="post-read-time">5 min de leitura</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="post-card">
+                    <div class="post-image">
+                        <div class="post-category">Planejamento</div>
+                    </div>
+                    <div class="post-content">
+                        <h3 class="post-title">Planilha de Controle Financeiro Gratuita</h3>
+                        <p class="post-excerpt">
+                            Baixe nossa planilha exclusiva e organize suas finanças de forma 
+                            simples e eficiente...
+                        </p>
+                        <div class="post-meta">
+                            <span class="post-date">12 de Janeiro, 2024</span>
+                            <span class="post-read-time">3 min de leitura</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="post-card">
+                    <div class="post-image">
+                        <div class="post-category">Economia</div>
+                    </div>
+                    <div class="post-content">
+                        <h3 class="post-title">10 Dicas para Economizar no Supermercado</h3>
+                        <p class="post-excerpt">
+                            Estratégias comprovadas para reduzir seus gastos mensais com 
+                            alimentação sem abrir mão da qualidade...
+                        </p>
+                        <div class="post-meta">
+                            <span class="post-date">10 de Janeiro, 2024</span>
+                            <span class="post-read-time">7 min de leitura</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="post-card">
+                    <div class="post-image">
+                        <div class="post-category">Investimentos</div>
+                    </div>
+                    <div class="post-content">
+                        <h3 class="post-title">Tesouro Direto: Guia Completo para Iniciantes</h3>
+                        <p class="post-excerpt">
+                            Tudo o que você precisa saber sobre o Tesouro Direto, desde o 
+                            cadastro até as melhores estratégias...
+                        </p>
+                        <div class="post-meta">
+                            <span class="post-date">8 de Janeiro, 2024</span>
+                            <span class="post-read-time">12 min de leitura</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="post-card">
+                    <div class="post-image">
+                        <div class="post-category">Cartão de Crédito</div>
+                    </div>
+                    <div class="post-content">
+                        <h3 class="post-title">Como Sair do Vermelho em 2024</h3>
+                        <p class="post-excerpt">
+                            Um plano passo a passo para quitar suas dívidas e recuperar 
+                            sua saúde financeira...
+                        </p>
+                        <div class="post-meta">
+                            <span class="post-date">5 de Janeiro, 2024</span>
+                            <span class="post-read-time">8 min de leitura</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="post-card">
+                    <div class="post-image">
+                        <div class="post-category">Educação</div>
+                    </div>
+                    <div class="post-content">
+                        <h3 class="post-title">Reserva de Emergência: Quanto Guardar?</h3>
+                        <p class="post-excerpt">
+                            Calcule o valor ideal para sua reserva de emergência e 
+                            descubra onde investir esse dinheiro...
+                        </p>
+                        <div class="post-meta">
+                            <span class="post-date">3 de Janeiro, 2024</span>
+                            <span class="post-read-time">6 min de leitura</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="load-more">
+                <button class="btn-load-more">Carregar Mais Artigos</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2 class="newsletter-title">Receba Dicas Financeiras Semanais</h2>
+                <p class="newsletter-subtitle">
+                    Cadastre-se e receba conteúdo exclusivo sobre investimentos e educação financeira
+                </p>
+                <form class="newsletter-form">
+                    <input type="email" class="newsletter-input" placeholder="Seu melhor e-mail">
+                    <button type="submit" class="newsletter-btn">Inscrever-se</button>
+                </form>
+                <p class="newsletter-disclaimer">
+                    Não enviamos spam. Você pode cancelar a qualquer momento.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">FinanceBlog</h3>
+                    <p class="footer-description">
+                        Seu portal de educação financeira com conteúdo de qualidade 
+                        para transformar sua relação com o dinheiro.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Facebook</a>
+                        <a href="#" class="social-link">Instagram</a>
+                        <a href="#" class="social-link">YouTube</a>
+                        <a href="#" class="social-link">LinkedIn</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Categorias</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Investimentos</a></li>
+                        <li><a href="#">Planejamento Financeiro</a></li>
+                        <li><a href="#">Cartão de Crédito</a></li>
+                        <li><a href="#">Financiamento</a></li>
+                        <li><a href="#">Educação Financeira</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Recursos</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Calculadoras</a></li>
+                        <li><a href="#">Planilhas Gratuitas</a></li>
+                        <li><a href="#">E-books</a></li>
+                        <li><a href="#">Cursos Online</a></li>
+                        <li><a href="#">Consultoria</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Contato</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Sobre Nós</a></li>
+                        <li><a href="#">Contato</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                        <li><a href="#">Termos de Uso</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 FinanceBlog. Todos os direitos reservados.</p>
+                <p>Desenvolvido com ❤️ para sua educação financeira</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
