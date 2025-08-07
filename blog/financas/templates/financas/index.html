@@ -128,110 +128,44 @@
                 <p class="section-subtitle">Fique por dentro das novidades do mundo financeiro</p>
             </div>
             
-            <!-- Posts Grid - Preparado para integração futura -->
+            <!-- Posts Grid - Posts Dinâmicos -->
             <div class="posts-grid">
-                <!-- Post Card Template -->
-                <article class="post-card">
-                    <div class="post-image">
-                        <div class="post-category">Investimentos</div>
-                    </div>
-                    <div class="post-content">
-                        <h3 class="post-title">Como Começar a Investir com Pouco Dinheiro</h3>
-                        <p class="post-excerpt">
-                            Descubra estratégias práticas para iniciar sua jornada de investimentos 
-                            mesmo com um orçamento limitado...
-                        </p>
-                        <div class="post-meta">
-                            <span class="post-date">15 de Janeiro, 2024</span>
-                            <span class="post-read-time">5 min de leitura</span>
+                {% if posts %}
+                    {% for post in posts %}
+                    <article class="post-card">
+                        <a href="{% url 'post_detail' post.pk %}" class="post-link">
+                            <div class="post-image">
+                                {% if post.image %}
+                                    <img src="{{ post.image.url }}" alt="{{ post.title }}" style="width: 100%; height: 100%; object-fit: cover;">
+                                {% endif %}
+                                <div class="post-category">Finanças</div>
+                            </div>
+                            <div class="post-content">
+                                <h3 class="post-title">{{ post.title }}</h3>
+                                <p class="post-excerpt">
+                                    {{ post.text|truncatewords:25 }}
+                                </p>
+                                <div class="post-meta">
+                                    <span class="post-date">{{ post.published_date|date:"d \d\e F, Y" }}</span>
+                                    <span class="post-author">Por {{ post.author.first_name|default:post.author.username }}</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    {% endfor %}
+                {% else %}
+                    <!-- Mensagem quando não há posts -->
+                    <div class="no-posts">
+                        <div class="no-posts-content">
+                            <div class="no-posts-icon">📝</div>
+                            <h3 class="no-posts-title">Nenhum post publicado ainda</h3>
+                            <p class="no-posts-text">
+                                Os primeiros artigos sobre educação financeira estarão disponíveis em breve. 
+                                Volte em alguns dias para conferir nosso conteúdo exclusivo!
+                            </p>
                         </div>
                     </div>
-                </article>
-
-                <article class="post-card">
-                    <div class="post-image">
-                        <div class="post-category">Planejamento</div>
-                    </div>
-                    <div class="post-content">
-                        <h3 class="post-title">Planilha de Controle Financeiro Gratuita</h3>
-                        <p class="post-excerpt">
-                            Baixe nossa planilha exclusiva e organize suas finanças de forma 
-                            simples e eficiente...
-                        </p>
-                        <div class="post-meta">
-                            <span class="post-date">12 de Janeiro, 2024</span>
-                            <span class="post-read-time">3 min de leitura</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="post-card">
-                    <div class="post-image">
-                        <div class="post-category">Economia</div>
-                    </div>
-                    <div class="post-content">
-                        <h3 class="post-title">10 Dicas para Economizar no Supermercado</h3>
-                        <p class="post-excerpt">
-                            Estratégias comprovadas para reduzir seus gastos mensais com 
-                            alimentação sem abrir mão da qualidade...
-                        </p>
-                        <div class="post-meta">
-                            <span class="post-date">10 de Janeiro, 2024</span>
-                            <span class="post-read-time">7 min de leitura</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="post-card">
-                    <div class="post-image">
-                        <div class="post-category">Investimentos</div>
-                    </div>
-                    <div class="post-content">
-                        <h3 class="post-title">Tesouro Direto: Guia Completo para Iniciantes</h3>
-                        <p class="post-excerpt">
-                            Tudo o que você precisa saber sobre o Tesouro Direto, desde o 
-                            cadastro até as melhores estratégias...
-                        </p>
-                        <div class="post-meta">
-                            <span class="post-date">8 de Janeiro, 2024</span>
-                            <span class="post-read-time">12 min de leitura</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="post-card">
-                    <div class="post-image">
-                        <div class="post-category">Cartão de Crédito</div>
-                    </div>
-                    <div class="post-content">
-                        <h3 class="post-title">Como Sair do Vermelho em 2024</h3>
-                        <p class="post-excerpt">
-                            Um plano passo a passo para quitar suas dívidas e recuperar 
-                            sua saúde financeira...
-                        </p>
-                        <div class="post-meta">
-                            <span class="post-date">5 de Janeiro, 2024</span>
-                            <span class="post-read-time">8 min de leitura</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="post-card">
-                    <div class="post-image">
-                        <div class="post-category">Educação</div>
-                    </div>
-                    <div class="post-content">
-                        <h3 class="post-title">Reserva de Emergência: Quanto Guardar?</h3>
-                        <p class="post-excerpt">
-                            Calcule o valor ideal para sua reserva de emergência e 
-                            descubra onde investir esse dinheiro...
-                        </p>
-                        <div class="post-meta">
-                            <span class="post-date">3 de Janeiro, 2024</span>
-                            <span class="post-read-time">6 min de leitura</span>
-                        </div>
-                    </div>
-                </article>
+                {% endif %}
             </div>
 
             <div class="load-more">
