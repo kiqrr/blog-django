@@ -1,0 +1,1 @@
+A ideia do projeto é desenvolver um blog com tema livre usando Django.
