@@ -1,0 +1,27 @@
+# Arquivos/pastas do Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Banco de dados SQLite (local)
+db.sqlite3
+
+# Arquivos do Django migrations compiladas
+*/migrations/__pycache__/
+
+# Ambiente virtual Python (ajuste o nome se for diferente)
+venv/
+.env/
+.venv/
+
+# Arquivos de configuração de IDE (VSCode, PyCharm, etc.)
+.vscode/
+.idea/
+
+# Arquivos temporários do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Arquivo de log ou temporários
+*.log
