@@ -6,3 +6,7 @@ ADMIN ACCOUNT
 user: admin
 password: admin
 email: admin@admin.com
+
+user 1:
+silvano / root / fulanociclano
+Sen@i123
